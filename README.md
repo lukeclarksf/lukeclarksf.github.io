@@ -4,7 +4,7 @@ A professional static website showcasing academic and certification milestones, 
 
 ## 🔗 Website Link
 
-View the deployed profile: **[Luke Clark Professional Profile](https://[YOUR_GITHUB_USERNAME].github.io/[YOUR_REPOSITORY_NAME]/)**
+View the deployed profile: **[Luke Clark Professional Profile](https://lukeclarksf.github.io/)**
 
 *(Note: Replace bracketed placeholders with your actual GitHub details.)*
 
