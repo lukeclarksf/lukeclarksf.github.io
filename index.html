@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luke Clark - Professional Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* --- Global Styles & Resets --- */
@@ -56,21 +57,48 @@
             color: var(--mckinsey-blue-accent);
         }
 
-        /* --- Header & Navigation --- */
+        /* --- Header & Navigation (TWEAKED) --- */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
+            padding: 20px 5%; /* TWEAK: Increased vertical padding */
             border-bottom: 1px solid var(--border-color);
             background-color: var(--background-light);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
         }
-        .header-nav a {
+        .header-nav {
+            display: flex; 
+            align-items: center;
+        }
+        .header-nav a:not(.github-link) { /* Target regular nav links */
             color: var(--text-light);
+            margin-left: 30px; /* TWEAK: Increased horizontal spacing between links */
+            transition: color 0.3s;
+        }
+        .header-nav a:hover {
+            color: var(--mckinsey-blue-accent);
         }
         .header-logo {
             color: var(--mckinsey-blue-dark);
+        }
+
+        /* --- GitHub Icon Style --- */
+        .github-link {
+            font-size: 1rem; 
+            color: var(--mckinsey-blue-dark);
+            margin-left: 30px; /* TWEAK: Increased spacing from Education link */
+            font-weight: 500; 
+            display: flex;
+            align-items: center;
+            text-decoration: none; 
+            transition: color 0.3s;
+        }
+        .github-link i {
+            margin-right: 5px; 
+        }
+        .github-link:hover {
+            color: var(--mckinsey-blue-accent);
         }
 
         /* --- Hero Section (Photo, Name, Tagline) --- */
@@ -82,11 +110,8 @@
             gap: 50px; 
         }
 
-        /* TWEAK: Removed photo-placeholder CSS block */
-        
         .photo-placeholder {
-            /* TWEAK: Set the container to be flexible and define image properties directly */
-            width: 300px; /* New base width for the photo container */
+            width: 300px;
             flex-shrink: 0; 
             border-radius: 4px;
             overflow: hidden;
@@ -94,7 +119,6 @@
         }
 
         .photo-placeholder img {
-            /* TWEAK: Ensure image fills its container without being cropped */
             width: 100%; 
             height: auto; 
             display: block;
@@ -167,6 +191,15 @@
             color: var(--background-light);
             font-size: 0.9rem;
         }
+        .footer a {
+            color: var(--background-light);
+            text-decoration: none;
+            margin-left: 10px;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+             color: var(--mckinsey-blue-accent);
+        }
     </style>
 </head>
 <body>
@@ -177,11 +210,14 @@
             <a href="#about">About</a>
             <a href="#certifications">Certifications</a>
             <a href="#education">Education</a>
+            <a href="https://github.com/lukeclarksf" target="_blank" class="github-link" aria-label="View Source on GitHub">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
         </nav>
     </header>
 
     <main class="container">
-
         <section id="hero" class="hero-section">
             <div class="photo-placeholder">
                 <img src="Luke Clark.png" alt="Luke Clark Professional Photo">
@@ -235,7 +271,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Luke Clark. All rights reserved.</p>
+        <p>&copy; 2025 Luke Clark. All rights reserved. 
+            <a href="https://github.com/lukeclarksf" target="_blank">View Source on GitHub</a>
+        </p>
     </footer>
 
 </body>
